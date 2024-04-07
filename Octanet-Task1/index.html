@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .home
+        {
+            margin: 0px;
+            background-image: url("./images/background.jpg");
+            background-size: cover;
+        }
+        .bg-color
+        {
+            background-color: rgba(0,0,0,0.4);
+        }
+        .form-element
+        {
+            width: 60px;
+        }
+        section
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .data
+        {
+            margin-right: 150px; 
+            margin-left: 150px; 
+        }
+        .icon
+        {   
+            width: 80px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid lightgray;
+            background-color: lightgray;
+            border-radius: 90px;
+            margin: 10px;
+            color: white;
+            font-size: 25px;
+        }
+        .icon:hover
+        {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover
+        {
+            text-decoration-line: underline;
+        }
+        .detail
+        {
+            top: 50%; 
+            left: 50%; 
+            padding-top: 200px; 
+            padding-bottom: 200px;
+        }
+        .luxury-details
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .collapse
+        {
+            margin-left: 150px;
+        }
+        @media (max-width: 770px)
+        {
+            .cont
+            {
+                display: none;
+            }
+            .detail
+            {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+            .luxury-details
+            {
+                display: block;
+            }
+            section
+            {
+                display: none;
+            }
+            .data{
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .data img
+            {
+                width: 350px;
+                height: 250px;
+            }
+            .icon
+            {
+                width: 40px;
+                margin: 5px;
+                font-size: 20px;
+            }
+            form button
+            {
+                width: 100%;
+            }
+            main img
+            {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="home">
+        <div class="bg-color text-white w-100" id="home">
+            <div class="navbar navbar-expand-lg data">
+                    <div class="navbar-brand text-white">
+                        <h1 style="font-family: cursive;">Tours & Travels</h1>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="d-flex list-unstyled justify-content-between navbar-nav w-75" style="font-size: 20px;">
+                            <li class="nav-item "><a href="#home" class=" active">Home</a></li>
+                            <li class="nav-item"><a href="#packages">Packages</a></li>
+                            <li class="nav-item"><a href="#about">About Us</a></li>
+                            <li class="nav-item"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class="text-center detail">
+                <h1 style="font-size: 60px;">Your Dream Vacation Awaits</h1>
+                <h1 style="font-family:cursive">Explore the world with Us</h1>
+            </div>
+            <div style="padding-bottom: 100px;">
+                <div style="width: 40%; margin: auto; background-color: rgba(255,255,255,0.6); padding: 10px;" class="text-black">
+                    <ul class="list-unstyled luxury-details">
+                        <li class="d-flex justify-content-between">
+                            <span class="bi bi-geo-alt-fill pt-3"></span>
+                            <select class="border-0 form-element" style="background-color: rgba(255,255,255,0.1);">
+                                <option value="from">From</option>
+                                <option value="mh">Maharashtra</option>
+                                <option value="ap">Andra Pradesh</option>
+                                <option value="ts">Telangana</option>
+                                <option value="tn">Tammilnadu</option>
+                                <option value="kl">Kerala</option>
+                                <option value="up">Uttar Pradesh</option>
+                                <option value="mp">Madya Pradesh</option>
+                                <option value="hp">Hiamachala Pradesh</option>
+                                <option value="jk">Jammu Kashmir</option>
+                            </select>
+                        </li>
+                        <li class="d-flex form-group">
+                            <span class="bi bi-geo-alt-fill pt-3"></span>
+                            <select class="border-0 form-element" style="background-color: rgba(255,255,255,0.1);">
+                                <option value="to">To</option>
+                                <option value="mh">Maharashtra</option>
+                                <option value="ap">Andra Pradesh</option>
+                                <option value="ts">Telangana</option>
+                                <option value="tn">Tammilnadu</option>
+                                <option value="kl">Kerala</option>
+                                <option value="up">Uttar Pradesh</option>
+                                <option value="mp">Madya Pradesh</option>
+                                <option value="hp">Hiamachala Pradesh</option>
+                                <option value="jk">Jammu Kashmir</option>
+                            </select>
+                        </li>
+                        <li class="d-flex">
+                           <span class="pt-3 pe-3">Departure Date</span> <input type="date" class="border-0 pt-3" style="background-color: rgba(255,255,255,0.1); width: 20px;">
+                        </li>
+                        <li class="d-flex">
+                            <span class="pt-3 pe-3">Return Date</span> <input type="date" class="border-0 pt-3" style="background-color: rgba(255,255,255,0.1); width: 20px;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-image: url(./images/bg4.jpg);">
+        <div style="background-color: rgba(255,255,255,0.6);">
+            <div id="packages">
+                <div class="text-center pt-5">
+                    <h1 style="font-family: cursive;">Some packages</h1>
+                </div>
+                <main class="d-flex justify-content-between flex-wrap m-5">
+        
+                </main>
+            </div>
+            <div class="text-center mt-5" id="about">
+                <h1 style="font-family:cursive;">Why us</h1>
+                <section class="data">
+
+                </section>
+                <div class="text-center data" style="margin-top: 50px;">
+                    <img src="./images/kt2.jpg">
+                    <p class="fst-italic fw-semibold text-body-tertiary" style="font-size: 30px;">We're a highly collaborative and supportive team, coming together on every project to ensure our clients get the very best result.</p>
+                </div>
+            </div>
+            <div class="data" id="contact">
+                <div class="text-center pt-5">
+                    <h1 style="font-family: cursive;">Contact Us</h1>
+                </div>
+                <div class="row mt-5">
+                    
+                    <div class="col-6">
+                        <h3 style="font-family: cursive;">You can Find us at</h3>
+                        <div class="mt-5">
+                            <p>Email</p>
+                            <p class="fw-semibold">tour.travels@gmail.com</p>
+                        </div>
+                        <div class="mt-4">
+                            <p>Phone Number</p>
+                            <p class="fw-semibold">+91 1234567890</p>
+                        </div>
+                        <div class="mt-4">
+                            <p>Location</p>
+                            <p class="fw-semibold">2360 Hood Avenue, San Diego, CA, 92123</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="www.twitter.com"><span class="bi bi-twitter icon"></span></a>
+                            <a href="www.instagram.com"><span class="bi bi-instagram icon"></span></a>
+                            <a href="www.facebook.com"><span class="bi bi-facebook icon"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3 style="font-family: cursive;">Let's get in Touch</h3>
+                        <form action="" class="mt-5 border">
+                            <input type="text" placeholder="Your Name" class="form-control border-0 p-3 border-bottom" style="background-color: rgba(255,255,255,0.3);">
+                            <input type="email" placeholder="Your Email" class="form-control border-0 p-3 border-bottom" style="background-color: rgba(255,255,255,0.3);">
+                            <textarea cols="30" rows="5" placeholder="Message" class="form-control border-0 p-3 border-bottom" style="background-color: rgba(255,255,255,0.3);"></textarea>
+                            <button class="btn btn-warning w-50 mt-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-white text-center mt-3" style="padding: 40px;">
+        <div>
+            2024 © All rights reserved by Tours & Travels
+        </div>
+    </footer>
+    <script>
+        var cities = [
+            {cityName:"kerala", image: "./images/kerala.jpg", description:"Lorem ipsum, dolor sit.", price:"50,000"},
+            {cityName:"mumbai", image: "./images/mumbai.jpg", description:"Lorem ipsum, dolor sit.", price:"30,000"},
+            {cityName:"indore", image: "./images/indore.jpg", description:"Lorem ipsum, dolor sit ", price:"60,000"},
+            {cityName:"agra", image: "./images/cd1.jpg", description:"Lorem ipsum, dolor sit.", price:"50,000"},
+            {cityName:"panjab", image: "./images/cd3.jpg", description:"Lorem ipsum, dolor.", price:"40,000"},
+            {cityName:"asam", image: "./images/cd4.jpg", description:"Lorem ipsum, dolor sit.", price:"35,000"},
+            {cityName:"hariyana", image: "./images/cd2.jpg", description:"Lorem ipsum, dolor sit.", price:"35,000"},
+            {cityName:"karnataka", image: "./images/cd4.jpg", description:"Lorem ipsum, dolor sit.", price:"35,000"}
+        ]
+        for(var i of cities)
+        {
+            var div = document.createElement("div");
+            div.className = "card m-2";
+            div.style.width = "400";
+            
+            var cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+            
+            var cardimg = document.createElement("div");
+            cardimg.className = "card-img";
+
+            var img = document.createElement("img");
+            img.src = i.image;
+            img.width = 300;
+            img.height = 300;
+            cardimg.appendChild(img);
+
+            cardBody.appendChild(cardimg);
+
+            var cardFooter = document.createElement("div");
+            cardFooter.className = "card-footer";
+
+            var h5 = document.createElement("h5");
+            h5.innerText = i.cityName;
+
+            cardFooter.appendChild(h5);
+            
+            var p = document.createElement("p");
+            p.innerText = i.description;
+            cardFooter.appendChild(p);
+
+            var pr = document.createElement("p");
+            pr.innerText = "\u20B9" + i.price;
+
+            cardFooter.appendChild(pr);
+
+            div.appendChild(cardBody);
+            div.appendChild(cardFooter);
+
+            document.querySelector("main").appendChild(div);
+        }
+
+    var content = [
+        {name: "guarantee", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque fugit soluta exercitationem doloribus explicabo unde, odit maxime natus nisi perspiciatis neque porro doloremque sit, vel consectetur consequuntur rem aspernatur. "},
+        {name: "services", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque fugit soluta exercitationem doloribus explicabo unde, odit maxime natus nisi perspiciatis neque porro doloremque sit, vel consectetur consequuntur rem aspernatur."},
+        {name: "Exeprience", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque fugit soluta exercitationem doloribus explicabo unde, odit maxime natus nisi perspiciatis neque porro doloremque sit, vel consectetur consequuntur rem aspernatur."},
+    ];
+    for(var i of content)
+    {
+        var div = document.createElement("div");
+        var card = document.createElement("div");
+        card.className = "card";
+        card.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+        card.style.paddingRight = 20;
+
+        var cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+        cardBody.style.padding = 50;
+
+        var nm = i.name;
+        var title = nm.toUpperCase();
+        var h5 = document.createElement("h5");
+        h5.innerHTML = title;
+        h5.className = "text-center";
+
+        cardBody.appendChild(h5);
+
+        var p = document.createElement("p");
+        p.innerHTML = i.description;
+        p.className = "text-center";
+
+        cardBody.appendChild(p);
+        card.appendChild(cardBody);
+        
+        document.querySelector("section").appendChild(card);
+        
+    }
+    </script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
